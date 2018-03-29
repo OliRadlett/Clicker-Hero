@@ -43,4 +43,4 @@ http.createServer(function(req, res) {
 
 	}
 
-}).listen(1234, "192.168.178.87");
+}).listen(1234);
