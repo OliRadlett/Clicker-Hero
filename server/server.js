@@ -1,5 +1,6 @@
 var http = require('http');
 var qs = require("query-string");
+var request = require("requestify");
 
 function processPost(request, response, callback) {
     var queryData = "";
@@ -35,11 +36,19 @@ http.createServer(function(req, res) {
 
 		processPost(req, res, function() {
 
-			console.log(req.post);
+			//console.log(req.post);
+            var command = req.post.command;
+            
+            if (command == "analyse_money") {
+
+                request.post("");
+
+            }
+
 			res.writeHead(200, "OK", {'Content-Type': 'text/plain'});
             res.end();
 
-		})
+		});
 
 	}
 
