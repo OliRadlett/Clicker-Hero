@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/posttest"
+        android:id="@+id/analyse_money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="POST test"
+        android:text="Analyse Money"
         android:visibility="visible"
         tools:layout_editor_absoluteX="37dp"
         tools:layout_editor_absoluteY="42dp" />

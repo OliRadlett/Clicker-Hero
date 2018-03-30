@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void POST(RequestQueue rq, final String key, final String value) {
 
-        String url = "http://192.168.178.87:1234";
+        // String url = "http://51.140.230.235:1234"; /* Address for remote server */
+        String url = "http://192.168.1.151:1234"; /* Address for laptop (Carsington) */
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -55,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         final RequestQueue queue = Volley.newRequestQueue(this);
 
-        final Button posttest = findViewById(R.id.posttest);
+        final Button analyseMoney = findViewById(R.id.analyse_money);
 
-        posttest.setOnClickListener(new View.OnClickListener() {
+        analyseMoney.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
-                POST(queue,"testKey", "testValue");
+                POST(queue,"command", "analyse_money");
 
             }
 

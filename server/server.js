@@ -1,6 +1,16 @@
 var http = require('http');
 var qs = require("query-string");
 var request = require("requestify");
+var PythonShell = require("python-shell");
+var process = require('process');
+process.chdir('../bot');
+var pyshell = new PythonShell("script.py");
+
+pyshell.on("message", function(message) {
+
+    console.log("Recieved ", message);
+
+});
 
 function processPost(request, response, callback) {
     var queryData = "";
@@ -38,10 +48,12 @@ http.createServer(function(req, res) {
 
 			//console.log(req.post);
             var command = req.post.command;
+            console.log("Recieved command from server: " + command);
             
             if (command == "analyse_money") {
 
-                request.post("");
+                console.log("Sending command to bot");
+                pyshell.send("analyse_money");
 
             }
 

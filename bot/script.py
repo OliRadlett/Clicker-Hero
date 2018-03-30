@@ -44,28 +44,11 @@ def MainLoop(duration):
         #Screenshot_Money()
         #OCR("money")
 
-menu = True
-print ("Welcome to Clicker-Hero")
-print ("Options: ")
-print ("[loop]['duration'] - Runs loop with specified duration (seconds)")
-print ("[analyse]['value'] - Analyse a specific value e.g. money")
-while (menu):
-    cmd = input("->")
+while (True):
+    cmd = input()
     if (cmd[0:4] == "loop"):
-        menu = False
         MainLoop(int(cmd[5:]))
     elif (cmd[0:7] == "analyse"):
-        menu = False
-        print ("Taking screenshot in: 5")
-        time.sleep(1)
-        print ("Taking screenshot in: 4")
-        time.sleep(1)
-        print ("Taking screenshot in: 3")
-        time.sleep(1)
-        print ("Taking screenshot in: 2")
-        time.sleep(1)
-        print ("Taking screenshot in: 1")
-        time.sleep(1)
         if (cmd[8:] == "money"):
             Screenshot_Money()
             OCR("money")
