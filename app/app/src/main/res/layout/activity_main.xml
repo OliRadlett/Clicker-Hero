@@ -5,15 +5,27 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/analyse_money"
+        android:id="@+id/get_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Analyse Money"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:text="GET test"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/getTestReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toStartOf="@+id/get_test"
+        app:layout_constraintStart_toStartOf="@+id/get_test"
+        app:layout_constraintTop_toBottomOf="@+id/get_test" />
 
 </android.support.constraint.ConstraintLayout>
